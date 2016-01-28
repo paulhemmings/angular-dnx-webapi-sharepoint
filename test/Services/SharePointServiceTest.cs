@@ -1,5 +1,4 @@
 using Xunit;
-using Moq;
 using angular_dnx_webapi_sharepoint.Services;
 using angular_dnx_webapi_sharepoint.Helpers;
 
@@ -15,7 +14,7 @@ namespace angular_dnx_webapi_sharepoint.test.Services
             string siteUrl = "http://test.com";
             string token = "some-test-token";
 
-            var requestHelper = new Mock<RequestHelper>();
+            var requestHelper = new RequestHelper();
             var sharePointService = new SharePointService {
                requestHelper = requestHelper
             };
